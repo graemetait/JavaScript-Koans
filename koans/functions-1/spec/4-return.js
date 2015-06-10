@@ -31,8 +31,8 @@ describe('return', function () {
 	});
 	it('4 - should understand return', function () {
 		var Samurai = function (name) {
-			if (!(this instanceof Samurai)) {
-				return new Samurai(name);
+			if (!(this instanceof arguments.callee)) {
+				return new arguments.callee(name);
 			}
 			this.name = name;
 			//todo - implement this so that test passes
