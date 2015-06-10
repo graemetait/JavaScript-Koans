@@ -9,5 +9,5 @@ SAMURAIPRINCIPLE.cell = {
   }
 };
 SAMURAIPRINCIPLE.isCellAliveInNextGeneration = function (isCellAlive, numberOfNeighbours) {
-  return SAMURAIPRINCIPLE.cell[isCellAlive][numberOfNeighbours] || false;
+  return SAMURAIPRINCIPLE.cell[isCellAlive].hasOwnProperty(numberOfNeighbours);
 };
