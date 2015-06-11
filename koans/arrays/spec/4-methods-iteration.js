@@ -4,7 +4,7 @@ describe('Arrays - iteration methods', function () {
 		var array = [1, 2, 3, 4, 5, 4, 3, 2, 1];
 		expect(array.filter(function (element) {
 			return element <= 3;
-		})).toEqual(__);
+		})).toEqual([1, 2, 3, 3, 2, 1]);
 	});
 	it('2 - should understand filter with this', function () {
 		var array = [1, 2, 3, 4, 5, 4, 3, 2, 1], THIS = {};
@@ -79,8 +79,10 @@ describe('Arrays - iteration methods', function () {
 		expect(result).toBe(__);
 	});
 	it('11 - should understand map and parseInt', function () {
-		var result = ['1', '2', '3'].map(parseInt);
-		expect(result).toEqual(__);
+		var result = ['1', '2', '3'].map(function (value) {
+			return parseInt(value);
+		});
+		expect(result).toEqual([1, 2, 3]);
 		//discuss with your pair
 	});
 });

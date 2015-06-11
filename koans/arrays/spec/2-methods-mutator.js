@@ -3,13 +3,13 @@
 describe('Mutator methods', function () {
 	it('1 - should understand push', function () {
 		var array = [1, 2, 3, 4, 5];
-		expect(array.push(6, 7)).toBe(__);
-		expect(array).toEqual(__);
-		expect(array.length).toBe(__);
+		expect(array.push(6, 7)).toBe(7);
+		expect(array).toEqual([1, 2, 3, 4, 5, 6, 7]);
+		expect(array.length).toBe(7);
 		array.length = 10;
 		array.push(8, 9);
-		expect(array).toEqual(__);
-		expect(array.length).toBe(__);
+		expect(array).toEqual([1, 2, 3, 4, 5, 6, 7, , , , 8, 9]);
+		expect(array.length).toBe(12);
 	});
 	it('2 - should understand pop', function () {
 		var array = [1, 2, 3, 4, 5];

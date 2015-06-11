@@ -2,9 +2,9 @@
 describe('Arrays - accessor methods', function () {
 	it('1 - should understand concat', function () {
 		var first = [1, 2, 3], second = [4, 5, 6];
-		expect(first.concat(second)).toEqual(__);
-		expect(first).toEqual(__);
-		expect(second).toEqual(__);
+		expect(first.concat(second)).toEqual([1, 2, 3, 4, 5, 6,]);
+		expect(first).toEqual([1, 2, 3]);
+		expect(second).toEqual([4, 5, 6]);
 	});
 	it('2 - should understand join', function () {
 		var array = [1, 2, 3, 4, 5];

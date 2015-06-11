@@ -9,16 +9,16 @@ describe('Arrays - basics', function () {
 	});
 	it('1 - should understand array literals', function () {
 		var array = [1, '2', [3], false], returnArguments, args;
-		expect(isArray(array)).toBe(__);
-		expect(isArray(array[0])).toBe(__);
-		expect(isArray(array[1])).toBe(__);
-		expect(isArray(array[2])).toBe(__);
-		expect(isArray(array[3])).toBe(__);
+		expect(isArray(array)).toBe(true);
+		expect(isArray(array[0])).toBe(false);
+		expect(isArray(array[1])).toBe(false);
+		expect(isArray(array[2])).toBe(true);
+		expect(isArray(array[3])).toBe(false);
 		returnArguments = function () {
 			return arguments;
 		};
 		args = returnArguments(1, 2, 3);
-		expect(isArray(args)).toBe(__);
+		expect(isArray(args)).toBe(false);
 	});
 	it('2 - arguments recap', function () {
 		var returnArguments = function () {
